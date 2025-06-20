@@ -53,8 +53,11 @@
             } else {
               checkUserRole(resultRes.user);
             }
-          } catch (err) {}
+          } catch (err) {
+            error.value = 'Error Logging In';
+          }
         }
+        function checkUserRole(user) {}
       }
     }).mount('#app');
   </script>
