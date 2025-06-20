@@ -156,8 +156,9 @@
         // NOT WORKING YET
         async function logout() {
           try {
-            const res = await fetch('/api/logout', {
+            const res = await fetch('/api/users/logout', {
               method: 'POST',
+              credentials: 'include'
             });
             const resultRes = await res.json();
             if (res.ok) {
