@@ -59,12 +59,11 @@
             error.value = 'Error Logging In';
           }
         }
-        function checkUserRole(usr)e {
-          loggedIn.value = true;
-          if (user.role == 'owner') {
-            window.location.href = '/owner-dashboard.html';
-          } else {
-            window.location.href = '/walker-dashboard.html';
+        function checkUserRole() {
+          try {
+            const res = await fetch('/api/users/me', {
+              
+            })
           }
         }
         onMounted(async () => {
