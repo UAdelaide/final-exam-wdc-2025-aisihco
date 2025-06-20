@@ -18,8 +18,8 @@
   </div>
   <div class="form">
     <h2>Log In</h2>
-    <form id="LoginForm" @submit.prevent="">
-      <input type="text" placeholder="Username" id="loginUsername" required>
+    <form id="LoginForm" @submit.prevent="login">
+      <input type="text" placeholder="Username" v-model="" required>
       <input type="password" placeholder="Password" id="loginPassword" required>
       <button type="submit">Log In</button>
     </form>
