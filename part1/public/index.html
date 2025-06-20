@@ -49,6 +49,7 @@
                     // Cycles through these colours on button click
                     const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
                     let index = 0;
+                    // Function to change the background colour, cycling through the colours list
                     const interval = setInterval(() => {
                         document.body.style.backgroundColor = colors[index];
                         index++;
@@ -56,6 +57,7 @@
                             clearInterval(interval);
                         }
                     }, 100);
+                    // Fetches the dog image from the dog API
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
                         const dogData = await dogRes.json()
