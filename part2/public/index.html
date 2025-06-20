@@ -64,48 +64,6 @@
             error.value = 'Error Logging In';
           }
         }
-        async function checkUserRole() {
-          try {
-            const res = await fetch('/api/users/me', {
-              credentials: 'include',
-              cache: 'no-store'
-            });
-            if (res.ok) {
-              const user = await res.json();
-              loggedIn.value = true;
-              if (user.role === 'owner') {
-                window.location.href = '/owner-dashboard.html';
-              } else if (user.role === 'walker') {
-                window.location.href = '/walker-dashboard.html';
-              }
-            } else {
-              loggedIn.value = false;
-            }
-          } catch (err) {
-            loggedIn.value = false;
-          }
-        }
-        onMounted(async () => {
-          try {
-            const res = await fetch('/api/users/me', {
-              credentials: 'include',
-              cache: 'no-store'
-            });
-            if (res.ok) {
-              const user = await res.json();
-              loggedIn.value = true;
-              checkUserRole(user);
-            }
-          } catch (err) {
-            loggedIn.value = false;
-          }
-        });
-        return {
-          form,
-          message,
-          error,
-          login
-        };
       }
     }).mount('#app');
   </script>
