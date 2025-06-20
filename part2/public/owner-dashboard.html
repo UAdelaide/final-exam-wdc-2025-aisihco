@@ -116,6 +116,7 @@
             const res = await fetch('/api/walks', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
+              // stringifies the walk request data table
               body: JSON.stringify(walkReqData)
             });
             const result = await res.json();
