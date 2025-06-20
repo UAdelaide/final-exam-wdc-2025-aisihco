@@ -12,7 +12,7 @@
         <h1>Display Dog of the Day</h1>
         <button type="button" @click="getDogImage">Get Image</button>
         <div v-if="fetchImage">
-            <img v-if="fetchImage" :src="fetchImage" alt="Random Dog Photo"/>
+            <img :src="fetchImage" alt="Random Dog Photo"/>
         </div>
     </div>
     <script setup>
