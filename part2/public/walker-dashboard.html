@@ -78,7 +78,7 @@
           try { // Grabs the user's id from /api/users/me
             const res = await fetch('/api/users/me');
             const user = await res.json();
-            currentUserId.value = user.user_id;
+            currentUserId.value = user.user_id; // stores the user id into currentUserId
           } catch (err) {
             error.value = err.message;
           }
