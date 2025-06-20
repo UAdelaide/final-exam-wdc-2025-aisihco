@@ -47,7 +47,8 @@
               body: JSON.stringify({
                 username: form.value.username,
                 password: form.value.password
-              })
+              }),
+              credentials: 'include'
             });
             const resultRes = await res.json();
             if (!res.ok) {
