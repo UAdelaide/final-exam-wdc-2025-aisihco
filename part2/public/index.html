@@ -50,12 +50,12 @@
               }),
             });
             const resultRes = await res.json();
-            // If the user logged in 
+            // If the user logged in
             if (res.ok) {
               // If the user is an owner, go to the owner dashboard
               if (resultRes.user.role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
-              } else {
+              } else { // If the user is 
                 window.location.href = 'walker-dashboard.html';
               }
             } else {
