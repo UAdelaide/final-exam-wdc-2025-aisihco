@@ -12,6 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// GET the dogs data where the owner's id matches to their owned dogs
 router.get('/dogs', async (req, res) => {
   const ownerID = req.session.user.user_id;
   try {
