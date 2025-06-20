@@ -17,7 +17,7 @@
     </div>
     <script>
         const { createApp } = Vue;
-        const fetchImage = ref('')
+        let fetchImage = ''
         async function getImageDog() {
             const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
             const dogResData = await response.json()
