@@ -61,8 +61,15 @@
           loggedIn.value = true;
           if (user.role == 'owner') {
             window.location.href = '/owner-dashboard.html';
+          } else {
+            window.location.href = '/walker-dashboard.html';
           }
         }
+        onMounted(async () => {
+          try {
+            const res
+          }
+        })
       }
     }).mount('#app');
   </script>
