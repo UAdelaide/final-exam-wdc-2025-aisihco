@@ -126,7 +126,10 @@
 
         async function loadDogs() {
           try {
-            
+            const res = await fetch('/dogs');
+            if (res.ok) {
+              dogs.value = await res.json()
+            }
           }
         }
         // NOT WORKING YET
