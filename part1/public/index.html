@@ -43,7 +43,9 @@
                     const interval = setInterval(() => {
                         document.body.style.backgroundColour = colors[index];
                         index++;
-                        if (index >= colors.)
+                        if (index >= colors.length) {
+                            clearInterval(interval);
+                        }
                     }
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
