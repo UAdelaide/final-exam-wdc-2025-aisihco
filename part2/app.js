@@ -13,7 +13,8 @@ app.use(session({
     secret: 'secret-key',
     cookie: {
         httpOnly: true,
-        
+        resave: false,
+        saveUnin
     }
 }));
 
