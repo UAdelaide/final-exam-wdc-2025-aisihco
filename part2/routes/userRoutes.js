@@ -12,7 +12,11 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/dogs', async)
+router.get('/dogs', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT ')
+  }
+})
 
 // POST a new user (simple signup)
 router.post('/register', async (req, res) => {
