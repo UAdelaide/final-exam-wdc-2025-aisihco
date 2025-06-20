@@ -5,6 +5,7 @@ const db = require('../db');
 
 router.get('/summary', async (req, res) => {
     try {
+        // getting user's username
         const [rows] = await db.query(`
             SELECT u.username AS walker_username,
             COUNT(wrate.rating_id) AS total_ratings,
