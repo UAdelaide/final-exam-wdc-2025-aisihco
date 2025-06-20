@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
       email: rows[0].email,
       role: rows[0].role
     };
-    res.json({
+    res.json({ // return the successful login and redirect to the appropriate page
       message: 'Login successful',
       user: rows[0],
       redirectTo: rows[0].role === 'owner' ? '/owner-dashboard.html' : '/walker-dashboard.html'
