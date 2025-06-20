@@ -110,7 +110,7 @@
               duration_minutes: form.value.duration_minutes,
               location: form.value.location
           }
-          console.log('Walk Req Data: ',)
+          console.log('Walk Req Data: ', walkReqData);
           try {
             const res = await fetch('/api/walks', {
               method: 'POST',
