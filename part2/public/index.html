@@ -51,8 +51,9 @@
             if (!res.ok) {
               error.value = resultRes.message || 'Login Failed';
             } else {
-              
+              checkUserRole(resultRes.user);
             }
+          } catch (err) {}
         }
       }
     }).mount('#app');
