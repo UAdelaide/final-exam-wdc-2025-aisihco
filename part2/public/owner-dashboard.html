@@ -101,6 +101,9 @@
 
         async function submitWalkRequest() {
           try {
+            if (!selectedDoGID) {
+              throw new Error(result.error )
+            }
             const res = await fetch('/api/walks', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
