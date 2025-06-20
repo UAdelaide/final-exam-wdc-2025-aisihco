@@ -70,8 +70,10 @@
               loggedIn.value = true;
               if (user.role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
-              } else if 
-            }
+              } else if (user.role === 'walker') {
+                window.location.href = 'walker-dashboard.html';
+              }
+            } else
           }
         }
         onMounted(async () => {
