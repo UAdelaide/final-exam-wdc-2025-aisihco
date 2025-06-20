@@ -2,6 +2,7 @@
     const path = require('path');
     require('dotenv').config();
     const session = require('express-session');
+    const cors = 
 
     const app = express();
 
