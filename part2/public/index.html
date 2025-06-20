@@ -49,12 +49,9 @@
             });
             const resultRes = await res.json();
             if (!res.ok) {
-              const user = resultRes.user;
-              if (user.role == 'owner') {
-                window.location.href = '/owner-dashboard.html';
-              } else {
-                window.location.href = '/walker-dashboard.html';
-              }
+              error.value = resultRes.message || 'Login Failed';
+            } else {
+              
             }
         }
       }
