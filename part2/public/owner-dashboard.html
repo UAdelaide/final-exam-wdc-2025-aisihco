@@ -21,8 +21,8 @@
           <div class="mb-3">
             <select v-model="selectedDogID">
               <option disabled value="">Select Your Dog</option>
-              <option v-for="item in dogs" :value="item.name">
-                {{}}
+              <option v-for="item in dogs" :value="item.dog_id">
+                {{ item.name }}
               </option>
             </select>
             <!--<label class="form-label">Dog ID</label>
