@@ -30,8 +30,9 @@
     createApp({
       setup() {
         const message = ref('Welcome to the Dog Walking Service!');
-        const username = ref('');
-        const password = ref('');
+        const form = ref({
+          
+        })
         const loggedIn = ref(false);
         const error = ref('');
         async function login() {
