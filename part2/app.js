@@ -21,8 +21,8 @@
 
     app.use(cors({
         origin: 'http://localhost:8080/index.html',
-        
-    }))
+        credentials: true
+    }));
 
     // Routes
     const walkRoutes = require('./routes/walkRoutes');
