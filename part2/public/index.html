@@ -76,8 +76,9 @@
             } else {
               loggedIn.value = false;
             }
+          } catch (err) {
+            loggedIn.value = false;
           }
-          
         }
         onMounted(async () => {
           try {
