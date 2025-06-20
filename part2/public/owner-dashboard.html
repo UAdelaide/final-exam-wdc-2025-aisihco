@@ -128,8 +128,12 @@
           try {
             const res = await fetch('/dogs');
             if (res.ok) {
-              dogs.value = await res.json()
+              dogs.value = await res.json();
+            } else {
+              error.value = 'Failed to load dog names';
             }
+          } catch (err) {
+            
           }
         }
         // NOT WORKING YET
