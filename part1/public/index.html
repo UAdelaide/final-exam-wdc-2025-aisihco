@@ -29,8 +29,9 @@
                         res.status(500).json({ error: 'error' })
                     }
                 }
+                return { dogImage, getDogImage }
             }
-        })
+        }).mount
 
     </script>
 </body>
