@@ -101,7 +101,7 @@
 
         async function submitWalkRequest() {
           try {
-            if (!selectedDogID) {
+            if (!selectedDogID.value) {
               throw new Error('Select a Dog');
             }
             const walkReqData = {
