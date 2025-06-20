@@ -11,7 +11,9 @@
     <div id="app">
         <h1>Display Dog of the Day</h1>
         <button type="button" @click="getDogImage">Get Image</button>
-        <div v-if=""
+        <div v-if="fetchImage">
+            <img src=""
+        </div>
     </div>
     <script>
         const { createApp } = Vue;
