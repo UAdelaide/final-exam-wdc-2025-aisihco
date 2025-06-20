@@ -5,7 +5,8 @@ const db = require('../db');
 
 router.get('/open', async (req, res) => {
     try {
-        // Getting the dog's name, 
+        // Getting the dog's name, the requested time, and duration of the walk
+        // along with location
         const [rows] = await db.query(`
             SELECT wreq.request_id, d.name AS dog_name, wreq.requested_time, wreq.duration_minutes, wreq.location,
             u.username AS owner_username
