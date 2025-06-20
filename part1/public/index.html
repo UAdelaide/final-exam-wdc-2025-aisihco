@@ -24,7 +24,7 @@
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
                         const dogData = await res.json()
-                        dogImage.value = 
+                        dogImage.value = dogData.message
                     }
                 }
             }
