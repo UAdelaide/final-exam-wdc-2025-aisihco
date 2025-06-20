@@ -43,7 +43,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const user = 3;
+        const currentUserId = ref(null);
 
         async function loadWalkRequests() {
           try {
@@ -78,7 +78,7 @@
           try {
             const res = await fetch('/api/users/me');
             const user = await res.json();
-            currentUserId.value = 
+            currentUserId.value =
           }
         }
 
