@@ -35,13 +35,8 @@
           password: '',
           error: ''
         };
-        const message = ref('Welcome to the Dog Walking Service!');
-        const form = ref({
-          username: '',
-          password: ''
-        });
-        const loggedIn = ref(false);
-        const error = ref('');
+      }
+      
         async function login() {
           error.value = '';
           try {
