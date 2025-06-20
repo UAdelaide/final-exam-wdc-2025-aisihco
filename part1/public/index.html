@@ -60,7 +60,9 @@
                     // Fetches the dog image from the dog API
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
+                        // Waits for a response
                         const dogData = await dogRes.json()
+                        // Gets the message tag 
                         fetchImage.value = dogData.message
                     } catch (err) {
                         res.status(500).json({ error: 'error' })
