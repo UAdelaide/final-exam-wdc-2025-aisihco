@@ -29,7 +29,9 @@
     const { createApp, ref, onMounted } = Vue;
     createApp({
       setup() {
-        const username
+        const message = ref('Welcome to the Dog Walking Service!');
+        const username = ref('');
+        const password = ref('');
       },
       methods: {
         async login() {
