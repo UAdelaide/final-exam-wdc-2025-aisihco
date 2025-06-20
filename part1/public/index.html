@@ -38,6 +38,7 @@
             setup() {
                 const fetchImage = ref()
                 async function getDogImage() {
+                    const colors = ['red', 'orange', 'yellow', 'green', 'blue']
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
                         const dogData = await dogRes.json()
