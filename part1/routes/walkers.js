@@ -12,9 +12,10 @@ router.get('/summary', async (req, res) => {
             (SELECT COUNT(*) FROM WalkApplications wapp JOIN WalkRequests wreq ON wapp.request_id = wreq.request_id
             WHERE wapp.walker_id = u.user_id AND wreq.status = 'completed')
             AS completed_walks,
-            FROM Users u,
-            LEFT JOIN WalkRatings wrate ON u.user_id = wrate.walker_id,
-            WHERE u.role = 'walker'`);
+            FROM Users u
+            LEFT JOIN WalkRatings wrate ON u.user_id = wrate.walker_id
+            WHERE u.role = 'walker'
+            GROUP BY u.username`);
         res.json(rows);
     } catch (err) {
         res.status(500).json({error: 'Failed dogs'});
