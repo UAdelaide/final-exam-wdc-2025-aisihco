@@ -38,7 +38,9 @@
             setup() {
                 const fetchImage = ref()
                 async function getDogImage() {
-                    const colors = ['red', 'orange', 'yellow', 'green', 'blue']
+                    const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
+                    let index = 0;
+                    const interval = setInterval(() =>
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
                         const dogData = await dogRes.json()
