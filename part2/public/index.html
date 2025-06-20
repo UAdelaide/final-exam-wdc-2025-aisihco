@@ -35,10 +35,10 @@
           password: '',
           error: ''
         };
-      }
-      
-        async function login() {
-          error.value = '';
+      },
+      methods:
+        async login() {
+          this.error = '';
           try {
             const res = await fetch('/api/users/login', {
               method: 'POST',
