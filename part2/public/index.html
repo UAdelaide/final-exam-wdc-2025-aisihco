@@ -37,7 +37,12 @@
         async function login() {
           error.value = '';
           try {
-            const res = await fetch('login')
+            const res = await fetch('/login', {
+              method: 'POST',
+              headers: {
+                
+              }
+            })
           }
           });
           const resultRes = await res.json();
