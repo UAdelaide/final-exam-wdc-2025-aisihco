@@ -33,6 +33,7 @@
         </div>
         <!--Creates a useless button to violate rules-->
         <button type="button">Fake Button</button>
+        <!--Binds image source so it can be dynamically updated on each button click-->
         <div v-if="fetchImage">
             <img :src="fetchImage" alt="Random Dog Photo"/>
         </div>
