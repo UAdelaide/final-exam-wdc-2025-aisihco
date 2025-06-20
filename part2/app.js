@@ -2,7 +2,7 @@
     const path = require('path');
     require('dotenv').config();
     const session = require('express-session');
-    const cors = 
+    const cors = require('cors');
 
     const app = express();
 
@@ -18,6 +18,10 @@
             secure: false
         }
     }));
+
+    app.use(cors({
+        origin: ''
+    }))
 
     // Routes
     const walkRoutes = require('./routes/walkRoutes');
