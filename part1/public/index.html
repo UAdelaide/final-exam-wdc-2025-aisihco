@@ -22,7 +22,9 @@
                 const dogImage = ref('')
                 async function getDogImage() {
                     try {
-                        const dogRes = await fetch()
+                        const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
+                        const dogData = await res.json()
+                        dogImage.value = 
                     }
                 }
             }
