@@ -57,7 +57,12 @@
             error.value = 'Error Logging In';
           }
         }
-        function checkUserRole(user) {}
+        function checkUserRole(user) {
+          loggedIn.value = true;
+          if (user.role == 'owner') {
+            
+          }
+        }
       }
     }).mount('#app');
   </script>
