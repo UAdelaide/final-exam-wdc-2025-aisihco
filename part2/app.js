@@ -11,10 +11,10 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(session({
     secret: 'secret-key',
+    resave: false,
+    saveUninitialized: true,
     cookie: {
         httpOnly: true,
-        resave: false,
-        saveUninitialized: true,
         maxAge: 1000*60*60
     }
 }));
