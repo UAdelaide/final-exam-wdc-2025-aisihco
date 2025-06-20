@@ -20,7 +20,7 @@
         const fetchImage = ref('')
         async function getImageDog() {
             const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
-            
+            const dogResData = await response.json()
         }
     </script>
 </body>
