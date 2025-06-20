@@ -43,13 +43,13 @@ router.post('/login', async (req, res) => {
     const [rows] = await db.query(`
       SELECT user_id, username, email, role FROM Users
       WHERE username = ? AND password_hash = ?
-    `, [username, password]); // 
+    `, [username, password]); // get the user's data based on the user's username and password
 
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    req.session.user = {
+    req.session.user = { // store the user's data into a session
       user_id: rows[0].user_id,
       username: rows[0].username,
       email: rows[0].email,
