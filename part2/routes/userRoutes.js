@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/dogs', async (req, res) => {
+  const ownerID = req.session.
   try {
     const [rows] = await db.query('SELECT dog_id, name FROM Dogs');
     res.json(rows);
