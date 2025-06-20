@@ -85,8 +85,9 @@ router.post('/logout', async (req, res) => {
     }
     res.clearCookie('connect.sid', {
       path: '/',
-      httpOnly
-    })
+      httpOnly: false,
+      secure: false
+    });
     res.json({ message: 'Logged Out' });
   });
 });
