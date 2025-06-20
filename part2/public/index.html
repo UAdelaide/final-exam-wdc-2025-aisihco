@@ -54,7 +54,11 @@
             if (!res.ok) {
               error.value = resultRes.message || 'Login Failed';
             } else {
-              if (resultRes)
+              if (resultRes.user.role === 'owner') {
+                window.location.href = 'owner-dashboard.html';
+              } else {
+                
+              }
             }
           } catch (err) {
             error.value = 'Error Logging In';
