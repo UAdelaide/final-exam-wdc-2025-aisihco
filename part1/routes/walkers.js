@@ -8,7 +8,7 @@ router.get('/summary', async (req, res) => {
         const [rows] = await db.query(`
             SELECT u.username AS walker_username,
             COUNT(wrate.rating_id) AS total_ratings,
-            (S))`);
+            ROUND(AVG())`);
         res.json(rows);
     } catch (err) {
         res.status(500).json({error: 'Failed dogs'});
