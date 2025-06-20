@@ -79,7 +79,15 @@
           } catch (err) {
             loggedIn.value = false;
           }
-        })
+        });
+        return {
+          username,
+          password,
+          message,
+          loggedIn,
+          error,
+          login
+        };
       }
     }).mount('#app');
   </script>
