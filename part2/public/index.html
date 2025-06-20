@@ -72,8 +72,12 @@
               cache: 'no-store'
             });
             if (res.ok) {
-              const user = await res.json()
+              const user = await res.json();
+              loggedIn.value = true;
+              checkUserRole(user);
             }
+          } catch (err) {
+            loggedIn.value = false;
           }
         })
       }
