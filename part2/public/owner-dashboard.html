@@ -22,7 +22,7 @@
             <!-- Create a drop down menu with default value of "Select Dog" -->
             <select v-model="selectedDogID" class="form-control">
               <option value="" disabled selected>Select Dog</option>
-              <!-- For each item in the list of dogs, get the dogs name-->
+              <!-- For each item in the list of dogs, get the dogs name from its id-->
               <option v-for="item in dogs" :key="item.dog_id" :value="item.dog_id">
                 {{ item.name }}
               </option>
