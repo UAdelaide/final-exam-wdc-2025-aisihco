@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 
 router.get('/dogs', async (req, res) => {
   try {
-    const [rows] = await db.query('SELECT ')
+    const [rows] = await db.query('SELECT * FROM Dogs')
   }
 })
 
