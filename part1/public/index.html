@@ -18,7 +18,7 @@
     <script setup>
         const { createApp, ref } = Vue
         createApp({
-            dogData() {
+            setup() {
                 const dogImage = ref('')
                 async function getDogImage() {
                     try {
