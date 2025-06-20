@@ -41,7 +41,9 @@
                     const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
                     let index = 0;
                     const interval = setInterval(() => {
-                        document.body.style.backgroundColour = 
+                        document.body.style.backgroundColour = colors[index];
+                        index++;
+                        if (index >= colors.)
                     }
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
