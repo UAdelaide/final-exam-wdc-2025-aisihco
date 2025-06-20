@@ -26,7 +26,7 @@
 <body>
     <div id="app">
         <h1>Display Dog of the Day. PS: EPILEPSY WARNING ON BUTTON CLICK</h1>
-        <button type="button" @click="getDogImage">Get Image</button>
+        <button type="button" @click="getDogImage">Button</button>
         <div v-if="fetchImage">
             <img :src="fetchImage" alt="Random Dog Photo"/>
         </div>
