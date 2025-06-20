@@ -153,9 +153,10 @@
             error.value = 'Error fetching';
           }
         }
-        // NOT WORKING YET
+
         async function logout() {
           try {
+            // fetches logout router request
             const res = await fetch('/api/users/logout', {
               method: 'POST',
               credentials: 'include'
@@ -170,7 +171,6 @@
             error.value = 'Logout Failed';
           }
         }
-        // NOT WORKING YET ^
 
         onMounted(() => {
           loadWalks();
