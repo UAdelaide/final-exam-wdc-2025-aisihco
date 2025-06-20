@@ -107,7 +107,8 @@
             const walkReqData = {
               dog_id: selectedDogID.value,
               requested_time: form.value.requested_time,
-              
+              duration_minutes: form.value.duration_minutes,
+              location: form.value.location
             }
             const res = await fetch('/api/walks', {
               method: 'POST',
