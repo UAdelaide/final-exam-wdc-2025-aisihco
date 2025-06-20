@@ -52,7 +52,7 @@
             });
             const resultRes = await res.json();
             if (!res.ok) {
-              error.value = resultRes.message || 'Login Failed';
+              this.error = resultRes.error;
             } else {
               if (resultRes.user.role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
