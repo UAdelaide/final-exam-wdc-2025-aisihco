@@ -59,7 +59,7 @@
             error.value = 'Error Logging In';
           }
         }
-        function checkUserRole() {
+        async function checkUserRole() {
           try {
             const res = await fetch('/api/users/me', {
               credentials: 'include',
