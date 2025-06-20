@@ -19,12 +19,12 @@
         const { createApp, ref } = Vue
         createApp({
             setup() {
-                const dogImage = ref('')
+                const fetchImage = ref('')
                 async function getDogImage() {
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
                         const dogData = await dogRes.json()
-                        dogImage.value = dogData.message
+                        fetchImage.value = dogData.message
                     } catch (err) {
                         res.status(500).json({ error: 'error' })
                     }
