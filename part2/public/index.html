@@ -37,11 +37,13 @@
         async login() {
           this.error = '';
           try {
+            // fetches the user's login details
             const res = await fetch('/api/users/login', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'
               },
+              // returns the useername and passwords as JSON strings
               body: JSON.stringify({
                 username: this.username,
                 password: this.password
