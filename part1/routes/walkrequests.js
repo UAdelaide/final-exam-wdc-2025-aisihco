@@ -4,7 +4,7 @@ const db = require('../db');
 
 
 router.get('/open', async (req, res) => {
-    const [rows] = await db.query('SELECT ');
+    const [rows] = await db.query('SELECT wreq.request');
         res.json(rows);
 });
 
