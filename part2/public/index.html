@@ -54,7 +54,7 @@
             if (!res.ok) {
               error.value = resultRes.message || 'Login Failed';
             } else {
-              checkUserRole();
+              if (resultRes)
             }
           } catch (err) {
             error.value = 'Error Logging In';
