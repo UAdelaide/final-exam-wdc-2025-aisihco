@@ -17,7 +17,6 @@
             color: lightgrey;
             animation: animation 3s linear infinite;
         }
-        <!---->
         @keyframes animation {
             from{transform: rotate(0deg);}
             to{transform: rotate(360deg);}
@@ -28,6 +27,7 @@
 <body>
     <div id="app">
         <h1>Display Dog of the Day. PS: EPILEPSY WARNING ON BUTTON CLICK, Read spinning text to find real button</h1>
+        <!--Creates a button that does nothing-->
         <div class="button1">
             <button type="button" @click="getDogImage">Real Button</button>
         </div>
