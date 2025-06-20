@@ -4,7 +4,7 @@ const db = require('../db');
 
 
 router.get('/open', async (req, res) => {
-    const [rows] = await db.query('SELECT wreq.request_id, d.name ');
+    const [rows] = await db.query('SELECT wreq.request_id, d.name AS dog_name, wreq.requested_time, wreq.duration_minutes');
         res.json(rows);
 });
 
