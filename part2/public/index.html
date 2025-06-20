@@ -60,7 +60,7 @@
         function checkUserRole(user) {
           loggedIn.value = true;
           if (user.role == 'owner') {
-            
+            window.location.href = '/owner-dashboard.html';
           }
         }
       }
