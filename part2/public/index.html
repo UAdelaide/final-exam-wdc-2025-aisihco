@@ -46,7 +46,7 @@
               },
               body: JSON.stringify({
                 username: form.value.username,
-                password: password.value
+                password: form.value.password
               })
             });
             const resultRes = await res.json();
