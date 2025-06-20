@@ -34,8 +34,7 @@
         const password = ref('');
         const loggedIn = ref(false);
         const error = ref('');
-      methods: {
-        async login() {
+        async function login() {
           const res = await fetch('/login', {
             method: 'POST',
             headers: {
