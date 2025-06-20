@@ -46,7 +46,7 @@
                         if (index >= colors.length) {
                             clearInterval(interval);
                         }
-                    }, 500);
+                    }, 200);
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
                         const dogData = await dogRes.json()
