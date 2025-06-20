@@ -73,8 +73,11 @@
               } else if (user.role === 'walker') {
                 window.location.href = 'walker-dashboard.html';
               }
-            } else
+            } else {
+              loggedIn.value = false;
+            }
           }
+          
         }
         onMounted(async () => {
           try {
