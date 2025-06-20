@@ -58,7 +58,9 @@
           const resultRes = await res.json();
           if (res.ok) {
             const user = resultRes.user;
-            
+            if (user.role == 'owner') {
+              window.location.href =
+            }
           }
         }
       }
