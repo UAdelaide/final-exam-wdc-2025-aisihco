@@ -68,7 +68,7 @@
             if (res.ok) {
               const user = await res.json();
               loggedIn.value = true;
-              if (role == '')
+              if (user.role === 'owner')
             }
           }
         }
