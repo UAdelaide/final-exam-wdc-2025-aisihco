@@ -27,10 +27,11 @@
 <body>
     <div id="app">
         <h1>Display Dog of the Day. PS: EPILEPSY WARNING ON BUTTON CLICK, Read spinning text to find real button</h1>
-        <!--Creates a button that does nothing-->
+        <!--Creates a button that is clickable to get the dog image-->
         <div class="button1">
             <button type="button" @click="getDogImage">Real Button</button>
         </div>
+        <!--Creates a useless button to violate rules-->
         <button type="button">Fake Button</button>
         <div v-if="fetchImage">
             <img :src="fetchImage" alt="Random Dog Photo"/>
