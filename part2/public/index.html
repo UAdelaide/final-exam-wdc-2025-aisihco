@@ -62,8 +62,10 @@
         function checkUserRole() {
           try {
             const res = await fetch('/api/users/me', {
-              
-            })
+              credentials: 'include',
+              cache: 'no-store'
+            });
+            
           }
         }
         onMounted(async () => {
