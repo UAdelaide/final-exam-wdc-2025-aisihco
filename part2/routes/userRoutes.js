@@ -76,7 +76,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// NOT WORKING YET v
 // POST logout method
 router.post('/logout', async (req, res) => {
   req.session.destroy((error) => {
