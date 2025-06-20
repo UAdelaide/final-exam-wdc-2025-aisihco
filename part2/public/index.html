@@ -52,11 +52,7 @@
             });
             const resultRes = await res.json();
             if (res.ok) {
-              if (resultRes.user.role === 'owner') {
-                window.location.href = 'owner-dashboard.html';
-              } else {
-                window.location.href = 'walker-dashboard.html';
-              }
+              window.location.href = resultRes.redirectTo;
             } else {
               this.error = resultRes.error;
             }
