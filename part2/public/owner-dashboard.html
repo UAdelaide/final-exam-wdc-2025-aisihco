@@ -102,7 +102,10 @@
         async function submitWalkRequest() {
           try {
             if (!selectedDoGID) {
-              throw new Error(result.error )
+              throw new Error('Select a Dog');
+            }
+            const walkReqData = {
+              dog_id: selectedDogID.
             }
             const res = await fetch('/api/walks', {
               method: 'POST',
