@@ -10,8 +10,11 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(session({
-    secret: 'secret',
-    
+    secret: 'secret-key',
+    cookie: {
+        httpOnly: true,
+        
+    }
 }));
 
 // Routes
