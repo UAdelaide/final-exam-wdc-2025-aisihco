@@ -13,7 +13,7 @@ router.get('/summary', async (req, res) => {
             WHERE wapp.walker_id = u.user_id AND wreq.status = 'completed')
             AS completed_walks,
             FROM Users u,
-            LEFT JOIN WalkRatings wrate `);
+            LEFT JOIN WalkRatings wrate ON u.user_id = `);
         res.json(rows);
     } catch (err) {
         res.status(500).json({error: 'Failed dogs'});
