@@ -19,7 +19,7 @@
         const { createApp, ref } = Vue
         createApp({
             setup() {
-                const fetchImage = ref('')
+                const fetchImage = ref()
                 async function getDogImage() {
                     try {
                         const dogRes = await fetch('https://dog.ceo/api/breeds/image/random')
