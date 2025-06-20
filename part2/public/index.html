@@ -47,9 +47,7 @@
                 password: password.value
               })
             });
-          }
-          });
-          const resultRes = await res.json();
+            const resultRes = await res.json();
           if (res.ok) {
             const user = resultRes.user;
             if (user.role == 'owner') {
