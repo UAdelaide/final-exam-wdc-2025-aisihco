@@ -20,7 +20,7 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <select v-model="selectedDogID">
-              <option disabled value="" selected>Select Your Dog</option>
+              <option value="" disabled >Select Your Dog</option>
               <option v-for="item in dogs" :key="item.dog_id" :value="item.dog_id">
                 {{ item.name }}
               </option>
