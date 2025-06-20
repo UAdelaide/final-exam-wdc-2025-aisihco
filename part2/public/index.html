@@ -55,7 +55,7 @@
               // If the user is an owner, go to the owner dashboard
               if (resultRes.user.role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
-              } else { // If the user is 
+              } else { // If the user is not an owner, i.e., a walker, go to walker dashboard
                 window.location.href = 'walker-dashboard.html';
               }
             } else {
