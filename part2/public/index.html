@@ -16,7 +16,7 @@
   <div class="form">
     <h2>Log In</h2>
     <form @submit.prevent="login">
-      <input type="text" placeholder="Username" v-model="username" required>
+      <input type="text" id="username" v-model="username" required>
       <input type="password" placeholder="Password" v-model="password" required>
       <button type="submit">Log In</button>
     </form>
