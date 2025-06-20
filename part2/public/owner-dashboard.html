@@ -119,7 +119,10 @@
 
         async function logout() {
           try {
-            const res = await 
+            const res = await fetch('/api/logout', {
+              method: 'POST',
+            });
+            const re
           }
         }
 
