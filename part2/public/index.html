@@ -17,10 +17,10 @@
       <form @submit.prevent="login">
         <div class="mb-3">
           <label class="form-label">Username:</label>
-          <input type="text" id="username" placeholder="Username" v-model="username" required>
+          <input type="text" id="username" placeholder="Username" class="form-control" v-model="username" required>
         </div>
         <div class="mb-3">
-          <label class="form-label">Dog ID</label>
+          <label class="form-label">Password:</label>
           <input type="password" id="password" placeholder="Password" v-model="password" required>
         </div>
         <button type="submit">Log In</button>
