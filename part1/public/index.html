@@ -5,7 +5,7 @@
     <title>Dog Walk Service</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <style>
-        button {
+        .button1 {
             position: relative;
             top: 7900px;
         }
@@ -26,7 +26,9 @@
 <body>
     <div id="app">
         <h1>Display Dog of the Day. PS: EPILEPSY WARNING ON BUTTON CLICK, Read spinning text to find real button</h1>
-        <div class="button1"></div>
+        <div class="button1">
+            <button type="button" @click="getDogImage">Real Button</button>
+        </div>
         <button type="button">Fake Button</button>
         <div v-if="fetchImage">
             <img :src="fetchImage" alt="Random Dog Photo"/>
