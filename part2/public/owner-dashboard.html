@@ -104,6 +104,7 @@
           if (!selectedDogID.value) {
               throw new Error('Select a Dog');
           }
+          // 
           const walkReqData = {
               dog_id: selectedDogID.value,
               requested_time: form.value.requested_time,
