@@ -46,10 +46,9 @@
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                username: form.value.username,
-                password: form.value.password
+                username: this.username,
+                password: this.password
               }),
-              credentials: 'include'
             });
             const resultRes = await res.json();
             if (!res.ok) {
