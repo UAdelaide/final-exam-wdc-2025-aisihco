@@ -7,7 +7,8 @@ router.get('/summary', async (req, res) => {
     try {
         const [rows] = await db.query(`
             SELECT u.username AS walker_username,
-            COUNT(walk)`);
+            COUNT(wrate.rating_id) AS total_ratings,
+            `);
         res.json(rows);
     } catch (err) {
         res.status(500).json({error: 'Failed dogs'});
