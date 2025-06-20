@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
             ON d.owner_id = u.user_id`);
         res.json(rows);
     } catch (err) {
-        res.status(500).json({error: 'Failed dogs' });
+        res.status(500).json({ error: 'Failed dogs' });
     }
 });
 

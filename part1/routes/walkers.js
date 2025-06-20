@@ -18,7 +18,7 @@ router.get('/summary', async (req, res) => {
             GROUP BY u.username`);
         res.json(rows);
     } catch (err) {
-        res.status(500).json({error: 'Failed dogs' });
+        res.status(500).json({ error: 'Failed dogs' });
     }
 });
 
