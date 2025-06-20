@@ -116,7 +116,7 @@
             message.value = '';
           }
         }
-
+        // NOT WORKING YET
         async function logout() {
           try {
             const res = await fetch('/api/logout', {
@@ -132,6 +132,7 @@
             error.value = 'Logout Failed';
           }
         }
+        // NOT WORKING YET ^
 
         onMounted(() => {
           loadWalks();
