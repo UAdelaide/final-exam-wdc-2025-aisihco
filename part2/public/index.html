@@ -26,9 +26,9 @@
   </div>
 
   <script>
-    const { createApp, ref, onMounted } = Vue;
+    const { createApp } = Vue;
     createApp({
-      setup() {
+      data() {
         const message = ref('Welcome to the Dog Walking Service!');
         const form = ref({
           username: '',
