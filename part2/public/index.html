@@ -65,7 +65,10 @@
               credentials: 'include',
               cache: 'no-store'
             });
-            
+            if (res.ok) {
+              const user = await res.json();
+              
+            }
           }
         }
         onMounted(async () => {
