@@ -68,7 +68,9 @@
             if (res.ok) {
               const user = await res.json();
               loggedIn.value = true;
-              if (user.role === 'owner')
+              if (user.role === 'owner') {
+                window.location.href = 'owner-dashboard.html';
+              } else if 
             }
           }
         }
