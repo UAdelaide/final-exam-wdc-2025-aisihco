@@ -2,8 +2,6 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const session = require('express-session');
-const cors = require('cors');
-
 const app = express();
 
 // Middleware
@@ -15,11 +13,6 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false }
-}));
-
-app.use(cors({
-    origin: 'http://localhost:8080',
-    credentials: true
 }));
 
 // Routes
