@@ -35,15 +35,10 @@
         const loggedIn = ref(false);
         const error = ref('');
         async function login() {
-          const res = await fetch('/login', {
-            method: 'POST',
-            headers: {
-              'Content-type': 'application/json'
-            },
-            body: JSON.stringify({
-              username: this.username,
-              password: this.password
-            })
+          error.value = '';
+          try {
+            const res = await fetch('login')
+          }
           });
           const resultRes = await res.json();
           if (res.ok) {
