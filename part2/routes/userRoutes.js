@@ -54,11 +54,7 @@ router.post('/login', async (req, res) => {
       username: rows[0].username,
       role: rows[0].role
     };
-    res.json({
-      message: 'Successful',
-      user: rows[0],
-      redirectTo: rows[0].role === 'owner' ? '/owner-dashboard.html' 
-    })
+
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
