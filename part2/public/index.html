@@ -45,7 +45,12 @@
       },
       methods: {
         async login() {
-          const res = await fetch('/login', {}
+          const res = await fetch('/login', {
+            method: 'POST',
+            headers: {
+              'Content-type'
+            }
+          }
         }
       }
     }).mount('#app');
