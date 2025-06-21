@@ -29,7 +29,7 @@ app.get('/api/dogs', async (req, res) => {
         // using part 1's api endpoint for dogs query
         // getting the dog's id, name, size, and owner id
         const [rows] = await db.query(`
-            SELECT d.dog_id, d.name AS Name, d.size AS Size, u.user_id AS "Owner ID"
+            SELECT d.dog_id AS "Dog ID", d.name AS Name, d.size AS Size, u.user_id AS "Owner ID"
             FROM Dogs d
             JOIN Users u
             ON d.owner_id = u.user_id`);
