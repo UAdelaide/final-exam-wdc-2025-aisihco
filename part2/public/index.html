@@ -42,7 +42,11 @@
         </thead>
         <tbody>
           <?php
-            $connect = mysql_connect("localhost", "root", "root")
+            $connect = mysql_connect("localhost", "root", "root");
+            if (!$connect) {
+              die(mysql_error());
+            }
+            
         </tbody>
       </table>
     </div>
