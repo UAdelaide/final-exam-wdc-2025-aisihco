@@ -101,6 +101,7 @@
       },
       async mounted() {
           try {
+            // fetch dog data from the api/dogs endpoint
             const res = await fetch('/api/dogs');
             this.dogs = await res.json();
           } catch (err) {
