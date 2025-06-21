@@ -43,7 +43,7 @@
           </tr>
         </thead>
         <tbody>
-          <!-- For each -->
+          <!-- Increments dogsInfo and imageIdx for every dog row in db -->
           <tr v-for="(dogsInfo, imageIdx) in dogs" :key="dogsInfo.dog_id">
             <td>{{ dogsInfo.dog_id }}</td>
             <td>{{ dogsInfo.name }}</td>
