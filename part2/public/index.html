@@ -106,7 +106,10 @@
             const res = await fetch('/api/dogs');
             this.dogs = await res.json();
             // fetch dog image from the dogs.ceo api
-            const 
+            const image = [];
+            for (key in this.dogs) {
+              const 
+            }
           } catch (err) {
             error.value = err.message;
           }
