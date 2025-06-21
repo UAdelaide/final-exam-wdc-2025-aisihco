@@ -17,6 +17,12 @@ app.use(session({
     cookie: { secure: false }
 }));
 
+// Routes
+const walkRoutes = require('./routes/walkRoutes');
+const userRoutes = require('./routes/userRoutes');
+
+app.use('/api/walks', walkRoutes);
+app.use('/api/users', userRoutes);
 
 app.get('/api/dogs', async (req, res) => {
     try {
@@ -33,13 +39,6 @@ app.get('/api/dogs', async (req, res) => {
         res.status(500).json({ error: 'Failed dogs' });
     }
 });
-
-// Routes
-const walkRoutes = require('./routes/walkRoutes');
-const userRoutes = require('./routes/userRoutes');
-
-app.use('/api/walks', walkRoutes);
-app.use('/api/users', userRoutes);
 
 // Export the app instead of listening here
 module.exports = app;
