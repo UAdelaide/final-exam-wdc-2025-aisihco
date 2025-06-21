@@ -112,11 +112,13 @@
             const image = [];
             // For each dog row there is in the database
             for (key in this.dogs) {
-              // fetch 'this.dogs' amount
+              // fetch 'this.dogs' amount of images from the api for every instance of a dog
               const randomImg = await fetch('https://dog.ceo/api/breeds/image/random');
               const resImg = await randomImg.json();
+              // pushes the message, which is the link, to the array 'image'
               image.push(resImg.message);
             }
+            
             this.images = image;
           } catch (err) {
             error.value = err.message;
