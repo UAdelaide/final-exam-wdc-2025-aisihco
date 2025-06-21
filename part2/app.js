@@ -30,7 +30,6 @@ app.get('/api/dogs', async (req, res) => {
         // getting the dog's
         const [rows] = await db.query(`
             SELECT d.dog_id AS Dog ID, d.name AS Name, d.size as Size, u.user_id AS Owner ID
-            AS owner_username
             FROM Dogs d
             JOIN Users u
             ON d.owner_id = u.user_id`);
