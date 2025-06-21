@@ -42,7 +42,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(dogsInfo, imageIdx) in dogs"
+          <tr v-for="(dogsInfo, imageIdx) in dogs" :key="dogsInfo.dog_id"
         </tbody>
       </table>
     </div>
