@@ -101,7 +101,7 @@
         async dogInfo() {
           try {
             const res = await fetch('/api/dogs');
-            if
+            this.dogs = await res.json();
           }
         }
       }
