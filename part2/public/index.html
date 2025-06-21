@@ -108,7 +108,8 @@
             // fetch dog image from the dogs.ceo api
             const image = [];
             for (key in this.dogs) {
-              const randomImg = await fetch('')
+              const randomImg = await fetch('https://dog.ceo/api/breeds/image/random');
+              
             }
           } catch (err) {
             error.value = err.message;
