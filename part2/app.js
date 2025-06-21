@@ -26,8 +26,8 @@ app.use('/api/users', userRoutes);
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        // getting the dog's name, size, and the user's username as owner username
-        // from the Dogs and Users table
+        // using part 1's api endpoint for dogs query
+        // getting the dog's 
         const [rows] = await db.query(`
             SELECT d.name AS dog_name, d.size, u.username
             AS owner_username
