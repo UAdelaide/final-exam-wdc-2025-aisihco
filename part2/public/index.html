@@ -106,11 +106,11 @@
       },
       async mounted() {
           try {
+            const image = [];
             // fetch dog data from the api/dogs endpoint
             const res = await fetch('/api/dogs');
             this.dogs = await res.json();
             // fetch dog image from the dogs.ceo api
-            const image = [];
             // For each dog row there is in the database
             for (key in this.dogs) {
               // fetch 'this.dogs' amount of images from the api for every instance of a dog
