@@ -99,24 +99,7 @@
             this.error = 'Error Logging In';
           }
         }
-      },
-      async mounted() {
-          try {
-            // fetch dog data from the api/dogs endpoint
-            const res = await fetch('/api/dogs');
-            this.dogs = await res.json();
-            // fetch dog image from the dogs.ceo api
-            const image = [];
-            for (key in this.dogs) {
-              const randomImg = await fetch('https://dog.ceo/api/breeds/image/random');
-              const resImg = await randomImg.json();
-              image.push(resImg.message);
-            }
-            this.images = image;
-          } catch (err) {
-            error.value = err.message;
-          }
-        }
+      }
     }).mount('#app');
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
