@@ -104,6 +104,7 @@
             // fetch dog data from the api/dogs endpoint
             const res = await fetch('/api/dogs');
             this.dogs = await res.json();
+            // fetch dog image from the dogs.ceo api  
           } catch (err) {
             error.value = err.message;
           }
