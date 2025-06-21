@@ -34,6 +34,7 @@
       <table style="width: 100%; text-align: center">
         <thead>
           <tr>
+            <!-- Displays titles for the table's header row -->
             <th>Dog ID</th>
             <th>Name</th>
             <th>Size</th>
@@ -42,6 +43,7 @@
           </tr>
         </thead>
         <tbody>
+          <!-- For each -->
           <tr v-for="(dogsInfo, imageIdx) in dogs" :key="dogsInfo.dog_id">
             <td>{{ dogsInfo.dog_id }}</td>
             <td>{{ dogsInfo.name }}</td>
