@@ -49,7 +49,7 @@
             <td>{{ dogsInfo.name }}</td>
             <td>{{ dogsInfo.size }}</td>
             <td>{{ dogsInfo.user_id }}</td>
-            <!-- Displays the image of max height and width of 100px, sourced from -->
+            <!-- Displays the image of max height and width of 100px, sourced from a random collection of images -->
             <td><img style="max-width: 100px; max-height: 100px" :src="images[imageIdx]" alt="random dog"></td>
           </tr>
         </tbody>
@@ -110,6 +110,7 @@
             this.dogs = await res.json();
             // fetch dog image from the dogs.ceo api
             const image = [];
+            // For each 
             for (key in this.dogs) {
               const randomImg = await fetch('https://dog.ceo/api/breeds/image/random');
               const resImg = await randomImg.json();
