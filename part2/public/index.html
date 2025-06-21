@@ -98,9 +98,8 @@
           } catch (err) {
             this.error = 'Error Logging In';
           }
-        }
-      },
-      async mounted() {
+        },
+        async mounted() {
           try {
             // fetch dog data from the api/dogs endpoint
             const res = await fetch('/api/dogs');
@@ -117,6 +116,7 @@
             error.value = err.message;
           }
         }
+      }
     }).mount('#app');
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
