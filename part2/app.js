@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config();
+const db = require('../db');
 
 const app = express();
 
@@ -16,10 +17,8 @@ app.use(session({
     cookie: { secure: false }
 }));
 
-const db = require('../db');
 
-
-router.get('/', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         // getting the dog's name, size, and the user's username as owner username
         // from the Dogs and Users table
