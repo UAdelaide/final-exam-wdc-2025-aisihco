@@ -110,8 +110,9 @@
             for (key in this.dogs) {
               const randomImg = await fetch('https://dog.ceo/api/breeds/image/random');
               const resImg = await randomImg.json();
-              image.push()
+              image.push(resImg);
             }
+            this.images = image;
           } catch (err) {
             error.value = err.message;
           }
