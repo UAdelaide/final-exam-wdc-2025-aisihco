@@ -110,8 +110,9 @@
             this.dogs = await res.json();
             // fetch dog image from the dogs.ceo api
             const image = [];
-            // For each 
+            // For each dog row there is in the database
             for (key in this.dogs) {
+              // fetch 'key' amounts 
               const randomImg = await fetch('https://dog.ceo/api/breeds/image/random');
               const resImg = await randomImg.json();
               image.push(resImg.message);
