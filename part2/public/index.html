@@ -31,7 +31,7 @@
       </form>
     </div>
     <div class="table">
-      <table>
+      <table style="width: 120%; text-align: center">
         <thead>
           <tr>
             <th>Dog ID</th>
@@ -41,7 +41,7 @@
             <th>Photo</th>
           </tr>
         </thead>
-        <tbody style="width: 200%; text-align: center">
+        <tbody>
           <tr v-for="(dogsInfo, imageIdx) in dogs" :key="dogsInfo.dog_id">
             <td>{{ dogsInfo.dog_id }}</td>
             <td>{{ dogsInfo.name }}</td>
