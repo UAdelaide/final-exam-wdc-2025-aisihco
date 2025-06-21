@@ -18,7 +18,7 @@ app.use(session({
 }));
 
 
-app.get('/', async (req, res) => {
+app.get('/api/dogs', async (req, res) => {
     try {
         // getting the dog's name, size, and the user's username as owner username
         // from the Dogs and Users table
