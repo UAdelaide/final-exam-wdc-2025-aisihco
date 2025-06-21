@@ -42,7 +42,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="dogsInfo in dogs" :key="dogsInfo.dog_id">
+          <tr v-for="(dogsInfo in dogs" :key="dogsInfo.dog_id">
             <td>{{ dogsInfo.dog_id }}</td>
             <td>{{ dogsInfo.name }}</td>
             <td>{{ dogsInfo.size }}</td>
@@ -107,7 +107,6 @@
             error.value = err.message;
           }
         }
-
     }).mount('#app');
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
